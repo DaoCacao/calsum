@@ -5,10 +5,16 @@
     android:orientation="vertical">
 
     <EditText
+        android:padding="16dp"
+        android:text="1231231"
         android:id="@+id/ed_expression"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="8" />
+        android:background="@null"
+        android:lines="3"
+        android:gravity="end|bottom" />
+
+    <View style="@style/DividerHorizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,24 +24,37 @@
 
         <TextView
             android:id="@+id/btn_clear"
-            style="@style/BtnStyle"
-            android:text="C" />
+            style="@style/FuncBtnStyle"
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_clear" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_hi"
-            style="@style/BtnStyle"
+            style="@style/FuncBtnStyle"
+            android:onClick="OnBtnClick"
             android:text="Hi" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_erase"
-            style="@style/BtnStyle"
-            android:text="@string/erase" />
+            style="@style/FuncBtnStyle"
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_erase" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
-            android:id="@+id/btn_multiply"
-            style="@style/BtnStyle"
-            android:text="X" />
+            android:id="@+id/btn_divide"
+            style="@style/FuncBtnStyle"
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_divide" />
+
     </LinearLayout>
+
+    <View style="@style/DividerHorizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,23 +65,35 @@
         <TextView
             android:id="@+id/btn_1"
             style="@style/BtnStyle"
-            android:text="1" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_1" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_2"
             style="@style/BtnStyle"
-            android:text="2" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_2" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_3"
             style="@style/BtnStyle"
-            android:text="3" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_3" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
-            android:id="@+id/btn_divide"
-            style="@style/BtnStyle"
-            android:text="/" />
+            android:id="@+id/btn_multiply"
+            style="@style/FuncBtnStyle"
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_multiply" />
     </LinearLayout>
+
+    <View style="@style/DividerHorizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -73,27 +104,35 @@
         <TextView
             android:id="@+id/btn_4"
             style="@style/BtnStyle"
-            android:text="4" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_4" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_5"
-
             style="@style/BtnStyle"
-            android:text="5" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_5" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_6"
-
             style="@style/BtnStyle"
-            android:text="6" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_6" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_minus"
-
-            style="@style/BtnStyle"
-            android:src="@drawable/ic_minus"
-            android:text="-" />
+            style="@style/FuncBtnStyle"
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_minus" />
     </LinearLayout>
+
+    <View style="@style/DividerHorizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,23 +143,35 @@
         <TextView
             android:id="@+id/btn_7"
             style="@style/BtnStyle"
-            android:text="7" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_7" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_8"
             style="@style/BtnStyle"
-            android:text="8" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_8" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_9"
             style="@style/BtnStyle"
-            android:text="9" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_9" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_plus"
-            style="@style/BtnStyle"
-            android:text="+" />
+            style="@style/FuncBtnStyle"
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_plus" />
     </LinearLayout>
+
+    <View style="@style/DividerHorizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -131,22 +182,32 @@
         <TextView
             android:id="@+id/btn_0"
             style="@style/BtnStyle"
-            android:text="0" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_0" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_00"
             style="@style/BtnStyle"
-            android:text="00" />
+            android:onClick="OnBtnClick"
+            android:text="@string/num_00" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_coma"
             style="@style/BtnStyle"
-            android:text="," />
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_coma" />
+
+        <View style="@style/DividerVertical" />
 
         <TextView
             android:id="@+id/btn_total"
-            style="@style/BtnStyle"
-            android:text="=" />
+            style="@style/TotalBtnStyle"
+            android:onClick="OnBtnClick"
+            android:text="@string/btn_total" />
     </LinearLayout>
 
 </LinearLayout>

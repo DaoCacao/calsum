@@ -9,14 +9,38 @@
     </style>
 
     <style name="BtnStyle">
-        <item name="android:clickable">true</item>
-        <item name="android:focusable">true</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">center</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">0.25</item>
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="FuncBtnStyle" parent="BtnStyle">
+        <item name="android:background">@color/primary_light</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="TotalBtnStyle" parent="BtnStyle">
+        <item name="android:background">@color/accent</item>
+        <item name="android:textColor">@color/icons</item>
+    </style>
+
+    <style name="DividerHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="DividerVertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider</item>
     </style>
 
 </resources>
