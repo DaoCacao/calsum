@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Calsum</string>
+    <string name="erase"><![CDATA[<]]></string>
 </resources>
