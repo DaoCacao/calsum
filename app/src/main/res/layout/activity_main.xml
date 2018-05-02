@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <EditText
-        android:padding="16dp"
-        android:text="1231231"
         android:id="@+id/ed_expression"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
+        android:gravity="end|bottom"
         android:lines="3"
-        android:gravity="end|bottom" />
+        android:padding="16dp"
+        tools:text="12×100÷6=6 000" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="end|bottom"
+        tools:text="6 000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <View style="@style/DividerHorizontal" />
 
@@ -51,7 +63,6 @@
             style="@style/FuncBtnStyle"
             android:onClick="OnBtnClick"
             android:text="@string/btn_divide" />
-
     </LinearLayout>
 
     <View style="@style/DividerHorizontal" />
