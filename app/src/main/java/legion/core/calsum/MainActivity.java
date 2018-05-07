@@ -89,7 +89,9 @@ public class MainActivity extends AppCompatActivity implements Facade.View {
             case R.id.btn_erase:
                 presenter.onEraseClick(edExpression.getSelectionStart());
                 break;
-
+            case R.id.btn_total:
+                presenter.onTotalClick();
+                break;
         }
     }
 }

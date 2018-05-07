@@ -34,15 +34,22 @@ class MainPresenter implements Facade.Presenter {
     @Override
     public void onOperatorClick(int selectorPos, String operator) {
         if (selectorPos != 0) {
+            if (isOperator(selectorPos - 1)) {
+                replaceInExpression(selectorPos, operator);
+            } else {
                 addToExpression(selectorPos, operator);
+            }
         }
         view.showTotal(parser.calculate(expression));
     }
 
-
     @Override
-    public void onComaClick(int selectionPos) {
-        addToExpression(selectionPos, ".");
+    public void onComaClick(int selectorPos) {
+        if (selectorPos != 0) {
+            if (!isComa(selectorPos - 1)) {
+                addToExpression(selectorPos, ".");
+            }
+        }
         view.showTotal(parser.calculate(expression));
     }
 
@@ -66,6 +73,26 @@ class MainPresenter implements Facade.Presenter {
         view.showTotal(parser.calculate(expression));
     }
 
+    @Override
+    public void onTotalClick() {
+        String total = parser.calculate(expression);
+        if (isValid(total)) {
+            expression = total;
+            view.showExpression(expression);
+            view.showTotal("");
+            view.moveSelector(expression.length());
+        }
+    }
+
+    private boolean isOperator(int selectorPos) {
+        return !Character.isDigit(expression.charAt(selectorPos));
+    }
+    private boolean isComa(int selectorPos) {
+        return expression.charAt(selectorPos) == '.';
+    }
+    private boolean isValid(String expression) {
+        return expression.matches("^\\d+\\.?\\d+?$");
+    }
     private void addToExpression(int selectorPos, String character) {
         String firstPart = expression.substring(0, selectorPos);
         String secondPart = expression.substring(selectorPos, expression.length());

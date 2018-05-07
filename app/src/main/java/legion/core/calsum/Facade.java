@@ -15,9 +15,13 @@ interface Facade {
 
         void OnNumberClick(int selectorPos, String number);
         void onOperatorClick(int selectorPos, String operator);
+
         void onComaClick(int selectionPos);
+
         void onClearClick();
         void onEraseClick(int selectorPos);
+
+        void onTotalClick();
     }
 
     interface Storage {
